@@ -25,6 +25,8 @@ public class RestAPIDemoSimplified {
 
         response.getStatusCode();
 
+        CreateBookingPOJO createBookingPOJO=response.as(CreateBookingPOJO.class);
+        System.out.println(createBookingPOJO.getBookingid());
     }
     public static String readDataFromFile(String filePath) throws FileNotFoundException {
         File file = new File(filePath);
